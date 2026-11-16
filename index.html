@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sujal Parmar — Python Developer & Digital Craftsman</title>
+
+    <meta name="description"
+        content="Explore the portfolio of Sujal Parmar, Python Developer specializing in Django, backend engineering, APIs and AI-powered applications.">
+
+    <meta name="keywords"
+        content="Python Developer, Django Developer, Backend Engineer, Python Portfolio, Sujal Parmar">
+
+    <meta property="og:title" content="Sujal Parmar | Python Developer">
+    <meta property="og:description"
+        content="A digital collection of software engineering experiments, projects and discoveries.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --parchment-aged: #F0E5D3;
+            --ink-black: #1A1512;
+            --leaf-green: #4A6741;
+            --floral-red: #BF6B63;
+            --earth-brown: #5D4037;
+            --faded-ink: #2F2F2F;
+            --paper-light: #F7F0E4;
+            --border: rgba(74, 103, 65, .38);
+
+            --font-serif: 'Playfair Display', serif;
+            --font-body: 'Libre Baskerville', serif;
+            --font-mono: 'DM Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--parchment-aged);
+            color: var(--ink-black);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+
+            background-image:
+                radial-gradient(ellipse at 15% 20%, rgba(150, 100, 50, .09), transparent 35%),
+                radial-gradient(ellipse at 85% 75%, rgba(130, 90, 50, .07), transparent 35%),
+                repeating-linear-gradient(0deg,
+                    transparent,
+                    transparent 3px,
+                    rgba(80, 50, 20, .018) 4px);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        button,
+        a {
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+
+        ::selection {
+            background: var(--leaf-green);
+            color: white;
+        }
+
+        .container {
+            width: min(1200px, 88%);
+            margin: auto;
+        }
+
+        .mono {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow {
+            color: var(--leaf-green);
+            margin-bottom: 22px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 65px;
+        }
+
+        .section-heading h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(35px, 4vw, 52px);
+            font-weight: 500;
+        }
+
+        .section-heading p {
+            color: var(--earth-brown);
+            margin-top: 15px;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .section-number {
+            color: var(--floral-red);
+            font-family: var(--font-mono);
+            font-size: 11px;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .ornament {
+            width: 100px;
+            height: 1px;
+            background: var(--leaf-green);
+            margin: 25px auto;
+            position: relative;
+        }
+
+        .ornament::after {
+            content: "✳";
+            position: absolute;
+            left: 50%;
+            top: -12px;
+            transform: translateX(-50%);
+            background: var(--parchment-aged);
+            color: var(--floral-red);
+            padding: 0 10px;
+        }
+
+        /* NAVIGATION */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(240, 229, 211, .94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            width: 88%;
+            max-width: 1400px;
+            height: 85px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--leaf-green);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--leaf-green);
+        }
+
+        .nav-cta {
+            border: 1px solid var(--leaf-green);
+            padding: 12px 20px;
+            color: var(--leaf-green);
+        }
+
+        .nav-cta:hover {
+            background: var(--leaf-green);
+            color: white;
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--ink-black);
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 700px;
+            padding: 100px 0 110px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(48px, 6.5vw, 82px);
+            line-height: 1.08;
+            font-weight: 500;
+            letter-spacing: -3px;
+        }
+
+        .hero h1 em {
+            color: var(--leaf-green);
+            font-weight: 400;
+        }
+
+        .hero-description {
+            max-width: 520px;
+            color: var(--earth-brown);
+            font-size: 14px;
+            line-height: 2.1;
+            margin-top: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 25px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 12px;
+            letter-spacing: .5px;
+            border: 1px solid var(--leaf-green);
+        }
+
+        .btn-primary {
+            background: var(--leaf-green);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--ink-black);
+            border-color: var(--ink-black);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            color: var(--leaf-green);
+        }
+
+        .btn-outline:hover {
+            background: var(--leaf-green);
+            color: white;
+        }
+
+        /* BOTANICAL HERO ILLUSTRATION */
+
+        .specimen {
+            height: 470px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 1000px;
+        }
+
+        .specimen-frame {
+            width: 360px;
+            height: 430px;
+            border: 1px solid var(--leaf-green);
+            padding: 12px;
+            position: relative;
+            transform: rotate(2deg);
+            box-shadow: 12px 15px 0 rgba(74, 103, 65, .08);
+            background: rgba(255, 255, 255, .12);
+        }
+
+        .specimen-inner {
+            height: 100%;
+            border: 1px solid rgba(74, 103, 65, .45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse, rgba(74, 103, 65, .10), transparent 65%);
+        }
+
+        .plant-illustration {
+            width: 90%;
+            height: 95%;
+            overflow: visible;
+            filter: drop-shadow(2px 3px 1px rgba(60, 50, 30, .15));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(-1deg);
+            }
+
+            50% {
+                transform: translateY(-9px) rotate(1deg);
+            }
+        }
+
+        .specimen-label {
+            position: absolute;
+            bottom: 20px;
+            right: -35px;
+            background: var(--parchment-aged);
+            border: 1px solid var(--leaf-green);
+            padding: 12px 18px;
+            font-family: var(--font-mono);
+            font-size: 9px;
+            letter-spacing: 1px;
+            transform: rotate(-4deg);
+            z-index: 2;
+        }
+
+        .specimen-note {
+            position: absolute;
+            top: 25px;
+            left: -30px;
+            color: var(--floral-red);
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 13px;
+            transform: rotate(-10deg);
+        }
+
+        .hero-corner {
+            position: absolute;
+            color: var(--leaf-green);
+            opacity: .15;
+            font-family: var(--font-serif);
+            font-size: 200px;
+            pointer-events: none;
+        }
+
+        .hero-corner.left {
+            left: -70px;
+            bottom: -80px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            padding: 115px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            align-items: center;
+            gap: 90px;
+        }
+
+        .about-illustration {
+            height: 410px;
+            border: 1px solid var(--leaf-green);
+            padding: 12px;
+            position: relative;
+        }
+
+        .about-illustration-inner {
+            height: 100%;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                radial-gradient(circle, rgba(191, 107, 99, .12), transparent 65%);
+        }
+
+        .about-illustration svg {
+            width: 80%;
+            height: 85%;
+        }
+
+        .about-content h2 {
+            font-family: var(--font-serif);
+            font-size: 43px;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        .about-content h2 em {
+            color: var(--leaf-green);
+        }
+
+        .about-content p {
+            color: var(--earth-brown);
+            font-size: 13px;
+            line-height: 2.1;
+            margin-top: 23px;
+        }
+
+        .about-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin-top: 35px;
+        }
+
+        .detail {
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+        }
+
+        .detail strong {
+            display: block;
+            font-family: var(--font-mono);
+            font-size: 10px;
+            color: var(--leaf-green);
+            margin-bottom: 9px;
+        }
+
+        .detail span {
+            font-size: 12px;
+        }
+
+        /* FEATURES / SKILLS */
+
+        .skills {
+            padding: 110px 0;
+            background: rgba(74, 103, 65, .055);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .skill-card {
+            padding: 35px 30px;
+            border: 1px solid var(--border);
+            background: rgba(247, 240, 228, .65);
+            position: relative;
+            transition: all .35s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--leaf-green);
+            box-shadow: 0 15px 35px rgba(74, 103, 65, .09);
+        }
+
+        .skill-icon {
+            width: 43px;
+            height: 43px;
+            color: var(--leaf-green);
+            margin-bottom: 25px;
+        }
+
+        .skill-card h3 {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .skill-card p {
+            font-size: 12px;
+            color: var(--earth-brown);
+            line-height: 2;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 22px;
+        }
+
+        .tags span {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            padding: 7px 10px;
+            border: 1px solid var(--border);
+            color: var(--leaf-green);
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            padding: 120px 0;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+        }
+
+        .project-card {
+            border: 1px solid var(--border);
+            background: rgba(247, 240, 228, .7);
+            transition: all .35s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(74, 103, 65, .1);
+        }
+
+        .project-image {
+            height: 240px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse at center, rgba(74, 103, 65, .12), transparent 70%),
+                #E8DDCA;
+        }
+
+        .project-image svg {
+            width: 110px;
+            height: 110px;
+            color: var(--leaf-green);
+            opacity: .8;
+            transition: transform .5s;
+        }
+
+        .project-card:hover .project-image svg {
+            transform: scale(1.12) rotate(-5deg);
+        }
+
+        .project-specimen {
+            position: absolute;
+            top: 15px;
+            left: 18px;
+            color: var(--leaf-green);
+        }
+
+        .project-body {
+            padding: 30px;
+        }
+
+        .project-index {
+            color: var(--floral-red);
+            font-family: var(--font-mono);
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        .project-body h3 {
+            font-family: var(--font-serif);
+            font-size: 27px;
+            font-weight: 500;
+            margin: 13px 0;
+        }
+
+        .project-body p {
+            color: var(--earth-brown);
+            font-size: 12px;
+            line-height: 2;
+        }
+
+        .project-link {
+            display: inline-flex;
+            margin-top: 22px;
+            gap: 10px;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 10px;
+            color: var(--leaf-green);
+            border-bottom: 1px solid var(--leaf-green);
+            padding-bottom: 5px;
+        }
+
+        .project-link:hover {
+            color: var(--floral-red);
+            border-color: var(--floral-red);
+        }
+
+        .project-card.featured {
+            grid-column: span 2;
+            background: rgba(247, 240, 228, .85);
+            border-color: var(--leaf-green);
+        }
+
+        .project-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px 20px;
+            margin: 20px 0;
+            padding: 16px 20px;
+            background: rgba(74, 103, 65, .05);
+            border: 1px dashed var(--border);
+        }
+
+        .project-feature-item {
+            font-size: 11px;
+            color: var(--earth-brown);
+            line-height: 1.8;
+            position: relative;
+            padding-left: 18px;
+        }
+
+        .project-feature-item::before {
+            content: "❧";
+            position: absolute;
+            left: 0;
+            color: var(--leaf-green);
+            font-size: 11px;
+        }
+
+        .project-feature-item strong {
+            color: var(--ink-black);
+            font-family: var(--font-mono);
+            font-size: 10px;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        /* EXPERIENCE */
+
+        .experience {
+            padding: 110px 0;
+            background: rgba(93, 64, 55, .045);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: auto;
+            border-left: 1px solid var(--leaf-green);
+            padding-left: 40px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding: 28px;
+            border: 1px solid var(--border);
+            background: var(--paper-light);
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -47px;
+            top: 35px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--floral-red);
+            border: 3px solid var(--parchment-aged);
+            outline: 1px solid var(--leaf-green);
+        }
+
+        .timeline-item h3 {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .timeline-date {
+            color: var(--leaf-green);
+            font-family: var(--font-mono);
+            font-size: 10px;
+            margin: 12px 0;
+        }
+
+        .timeline-item p {
+            color: var(--earth-brown);
+            font-size: 12px;
+            line-height: 2;
+        }
+
+        .timeline-badge {
+            display: inline-block;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            color: var(--floral-red);
+            margin-bottom: 6px;
+        }
+
+        .timeline-subtitle {
+            font-family: var(--font-body);
+            font-size: 13px;
+            color: var(--leaf-green);
+            font-style: italic;
+            margin-top: 4px;
+        }
+
+        .timeline-item ul {
+            list-style: none;
+            margin-top: 14px;
+        }
+
+        .timeline-item ul li {
+            position: relative;
+            padding-left: 20px;
+            font-size: 12px;
+            color: var(--earth-brown);
+            line-height: 1.9;
+            margin-bottom: 8px;
+        }
+
+        .timeline-item ul li::before {
+            content: "❧";
+            position: absolute;
+            left: 0;
+            color: var(--leaf-green);
+            font-size: 11px;
+        }
+
+        /* TESTIMONIALS */
+
+        .testimonials {
+            padding: 110px 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .testimonial-card {
+            padding: 35px;
+            border: 1px solid var(--border);
+            background: rgba(247, 240, 228, .6);
+        }
+
+        .quote-mark {
+            font-family: var(--font-serif);
+            font-size: 65px;
+            line-height: 1;
+            color: var(--floral-red);
+        }
+
+        .testimonial-card p {
+            color: var(--earth-brown);
+            font-size: 12px;
+            line-height: 2;
+            font-style: italic;
+        }
+
+        .testimonial-card h4 {
+            font-family: var(--font-serif);
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--leaf-green);
+        }
+
+        .testimonial-card small {
+            font-family: var(--font-mono);
+            font-size: 9px;
+            color: var(--earth-brown);
+        }
+
+        /* FINAL CTA */
+
+        .contact {
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: #E6D8C3;
+            border-top: 1px solid var(--border);
+        }
+
+        .contact h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(38px, 5vw, 62px);
+            font-weight: 500;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.2;
+        }
+
+        .contact h2 em {
+            color: var(--leaf-green);
+        }
+
+        .contact p {
+            max-width: 570px;
+            margin: 25px auto 35px;
+            color: var(--earth-brown);
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #283327;
+            color: #EDE3D2;
+            padding: 75px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-brand h3 {
+            font-family: var(--font-serif);
+            font-size: 29px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand h3 span {
+            color: #B8C8A8;
+        }
+
+        .footer-brand p {
+            font-size: 11px;
+            line-height: 2;
+            color: #C7CEBC;
+            max-width: 300px;
+        }
+
+        .footer-column h4 {
+            font-family: var(--font-serif);
+            font-size: 18px;
+            margin-bottom: 22px;
+            color: #D8C8A9;
+        }
+
+        .footer-column a {
+            display: block;
+            font-size: 11px;
+            margin-bottom: 15px;
+            color: #C7CEBC;
+        }
+
+        .footer-column a:hover {
+            color: white;
+            transform: translateX(4px);
+        }
+
+        .socials {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .socials a {
+            width: 38px;
+            height: 38px;
+            border: 1px solid rgba(255, 255, 255, .35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .socials a:hover {
+            background: #EDE3D2;
+            color: #283327;
+        }
+
+        .socials svg {
+            width: 17px;
+            height: 17px;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, .2);
+            margin-top: 55px;
+            padding-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-family: var(--font-mono);
+            font-size: 9px;
+            color: #C7CEBC;
+        }
+
+        /* ANIMATION */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity .8s ease, transform .8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 950px) {
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .about-illustration {
+                max-width: 420px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .skills-grid,
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 700px) {
+
+            .nav-inner {
+                height: 72px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                width: 100%;
+                padding: 25px 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                background: var(--parchment-aged);
+                border-bottom: 1px solid var(--leaf-green);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero {
+                padding: 85px 0;
+            }
+
+            .hero h1 {
+                font-size: 49px;
+                letter-spacing: -2px;
+            }
+
+            .specimen {
+                height: 410px;
+            }
+
+            .specimen-frame {
+                width: 290px;
+                height: 370px;
+            }
+
+            .specimen-note {
+                left: 0;
+            }
+
+            .skills-grid,
+            .projects-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card.featured {
+                grid-column: span 1;
+            }
+
+            .project-features {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content h2 {
+                font-size: 36px;
+            }
+
+            .section-heading {
+                margin-bottom: 45px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 35px 20px;
+            }
+
+            .footer-brand {
+                grid-column: span 2;
+            }
+
+            .copyright {
+                flex-direction: column;
+            }
+        }
+
+        @media(prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: .01ms !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <div class="nav-inner">
+
+            <a href="#home" class="logo">
+                Sujal<span>.</span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                    <path d="M3 6h18M3 12h18M3 18h18" />
+                </svg>
+
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Expertise</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Journey</a>
+                <a href="#contact" class="nav-cta">Contact Me ↗</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-corner left">❧</div>
+
+        <div class="container hero-grid">
+
+            <div class="hero-content reveal">
+
+                <div class="eyebrow mono">
+                    DIGITAL FIELD NOTES · VOL. 001
+                </div>
+
+                <h1>
+                    Growing Ideas Into
+                    <em>Intelligent</em>
+                    Systems.
+                </h1>
+
+                <p class="hero-description">
+                    I am Sujal Parmar, a Python Developer and Backend Engineer
+                    interested in building thoughtful software, intelligent
+                    applications and reliable digital systems.
+                    Welcome to my collection of experiments and discoveries.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        Explore My Projects
+                        <span>↗</span>
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        Get In Touch
+                    </a>
+
+                </div>
+
+                <div class="mono" style="margin-top:40px;color:var(--earth-brown)">
+                    PYTHON · DJANGO · BACKEND · ARTIFICIAL INTELLIGENCE
+                </div>
+
+            </div>
+
+
+            <!-- BOTANICAL SCIENTIFIC ILLUSTRATION -->
+
+            <div class="specimen reveal">
+
+                <div class="specimen-note">
+                    Fig. 01 — Growth through curiosity
+                </div>
+
+                <div class="specimen-frame">
+
+                    <div class="specimen-inner">
+
+                        <svg class="plant-illustration" viewBox="0 0 300 400" fill="none">
+
+                            <!-- MAIN STEM -->
+
+                            <path d="M150 370 C145 320 160 260 145 200 C138 150 155 100 150 35" stroke="#4A6741"
+                                stroke-width="2.2" />
+
+                            <!-- LEFT BRANCH -->
+
+                            <path d="M148 280 C115 250 80 230 55 180" stroke="#4A6741" stroke-width="1.7" />
+
+                            <path d="M146 215 C110 190 95 150 75 115" stroke="#4A6741" stroke-width="1.7" />
+
+                            <!-- RIGHT BRANCH -->
+
+                            <path d="M150 245 C185 220 210 185 225 145" stroke="#4A6741" stroke-width="1.7" />
+
+                            <path d="M150 160 C185 145 200 115 215 80" stroke="#4A6741" stroke-width="1.7" />
+
+                            <!-- LEAVES -->
+
+                            <g stroke="#4A6741" stroke-width="1.3">
+
+                                <path d="M55 180 C5 155 18 95 75 115 C94 140 83 167 55 180Z" fill="#7B916B"
+                                    fill-opacity=".5" />
+
+                                <path d="M75 115 C39 110 42 65 92 70 C111 88 97 108 75 115Z" fill="#A2AC7C"
+                                    fill-opacity=".5" />
+
+                                <path d="M225 145 C270 110 282 165 240 187 C216 181 211 161 225 145Z" fill="#829773"
+                                    fill-opacity=".5" />
+
+                                <path d="M215 80 C249 35 275 75 235 111 C213 111 204 96 215 80Z" fill="#A2AC7C"
+                                    fill-opacity=".5" />
+
+                                <path d="M145 200 C100 165 120 125 159 155 C170 173 160 190 145 200Z" fill="#78916C"
+                                    fill-opacity=".5" />
+
+                                <path d="M155 275 C190 235 225 270 188 298 C166 305 150 292 155 275Z" fill="#A2AC7C"
+                                    fill-opacity=".5" />
+
+                            </g>
+
+                            <!-- LEAF VEINS -->
+
+                            <g stroke="#4A6741" stroke-width=".7" opacity=".8">
+
+                                <path d="M55 180L75 115M55 180L28 140M55 180L64 147" />
+                                <path d="M75 115L92 70M75 115L57 91" />
+                                <path d="M225 145L240 187M225 145L260 145M225 145L240 165" />
+                                <path d="M215 80L235 111M215 80L255 78" />
+                                <path d="M145 200L159 155M145 200L120 172" />
+                                <path d="M155 275L188 298M155 275L177 255" />
+
+                            </g>
+
+                            <!-- FLOWER -->
+
+                            <g transform="translate(150 38)">
+
+                                <path
+                                    d="M0 0 C-28 -35 -50 -4 -20 10 C-40 40 -10 45 0 17 C15 45 42 30 20 10 C50 -8 26 -36 0 0Z"
+                                    fill="#BF6B63" fill-opacity=".55" stroke="#9B5A50" stroke-width="1.4" />
+
+                                <circle r="6" fill="#D6AD66" stroke="#5D4037" />
+
+                            </g>
+
+                            <!-- ROOTS -->
+
+                            <g stroke="#5D4037" stroke-width="1.2" fill="none">
+
+                                <path d="M150 370C130 385 125 395 110 398" />
+                                <path d="M150 370C160 385 170 393 183 398" />
+                                <path d="M150 370C148 386 145 393 142 399" />
+                                <path d="M150 370C180 380 200 380 212 390" />
+
+                            </g>
+
+                        </svg>
+
+                        <div class="mono"
+                            style="position:absolute;top:15px;left:15px;color:var(--leaf-green);font-size:8px">
+                            PLATE NO. 001
+                        </div>
+
+                        <div class="mono"
+                            style="position:absolute;bottom:12px;right:12px;color:var(--leaf-green);font-size:8px">
+                            STUDIUM · PYTHON
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="specimen-label">
+                    SUJAL PARMAR<br>
+                    PYTHON DEVELOPER<br>
+                    <span style="color:var(--floral-red)">EST. 2026</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <div class="container about-grid">
+
+            <div class="about-illustration reveal">
+
+                <div class="about-illustration-inner">
+
+                    <svg viewBox="0 0 300 350" fill="none">
+
+                        <g stroke="#4A6741" stroke-width="1.4">
+
+                            <path d="M150 315C145 260 155 200 150 130" />
+                            <path d="M150 250C100 230 70 180 60 130" />
+                            <path d="M150 200C190 170 220 135 235 85" />
+
+                            <path d="M60 130C15 95 45 55 90 90C100 110 85 125 60 130Z" fill="#91A27B"
+                                fill-opacity=".45" />
+
+                            <path d="M235 85C280 55 290 105 245 125C220 115 220 95 235 85Z" fill="#91A27B"
+                                fill-opacity=".45" />
+
+                            <path d="M150 130C110 90 135 45 160 75C175 100 165 120 150 130Z" fill="#BF6B63"
+                                fill-opacity=".4" />
+
+                            <path d="M150 315L120 340M150 315L180 340M150 315L150 345" />
+
+                        </g>
+
+                        <circle cx="150" cy="70" r="5" fill="#BF6B63" />
+
+                    </svg>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-content reveal">
+
+                <div class="section-number">01 / THE RESEARCHER</div>
+
+                <h2>
+                    A Curious Mind Behind
+                    <em>Every Creation.</em>
+                </h2>
+
+                <p>
+                    I am a Master of Computer Applications graduate with an
+                    interest in backend engineering, Python development and
+                    emerging technologies.
+                </p>
+
+                <p>
+                    My development journey involves creating web applications,
+                    designing databases, integrating APIs and experimenting
+                    with AI-powered tools.
+                </p>
+
+                <p>
+                    I enjoy understanding how systems work and transforming
+                    complex requirements into practical, maintainable software.
+                    My approach is rooted in curiosity, experimentation and
+                    continuous learning.
+                </p>
+
+                <div class="about-details">
+
+                    <div class="detail">
+                        <strong>EDUCATION</strong>
+                        <span>Master of Computer Applications (MCA)</span>
+                    </div>
+
+                    <div class="detail">
+                        <strong>PRIMARY LANGUAGE</strong>
+                        <span>Python</span>
+                    </div>
+
+                    <div class="detail">
+                        <strong>FOCUS</strong>
+                        <span>Backend Engineering</span>
+                    </div>
+
+                    <div class="detail">
+                        <strong>LOCATION</strong>
+                        <span>Gujarat, India</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section class="skills" id="skills">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="section-number">02 / THE COLLECTION</div>
+
+                <h2>Areas of Exploration</h2>
+
+                <p>
+                    The technologies and disciplines behind my digital experiments.
+                </p>
+
+                <div class="ornament"></div>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <article class="skill-card reveal">
+
+                    <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M8 8l-4 4 4 4m8-8 4 4-4 4m-3-10-2 12" />
+                    </svg>
+
+                    <h3>Backend Development</h3>
+
+                    <p>
+                        Developing application logic, server-side functionality
+                        and maintainable backend architectures.
+                    </p>
+
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>Laravel</span>
+                        <span>PHP</span>
+                        <span>Node.js</span>
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card reveal">
+
+                    <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <ellipse cx="12" cy="5" rx="9" ry="3" />
+                        <path d="M3 5v14c0 4 18 4 18 0V5M3 12c0 4 18 4 18 0" />
+                    </svg>
+
+                    <h3>Database Engineering</h3>
+
+                    <p>
+                        Working with relational and document databases,
+                        data structures and efficient querying.
+                    </p>
+
+                    <div class="tags">
+                        <span>MySQL</span>
+                        <span>PostgreSQL</span>
+                        <span>MongoDB</span>
+                        <span>SQL</span>
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card reveal">
+
+                    <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4" />
+                    </svg>
+
+                    <h3>Artificial Intelligence</h3>
+
+                    <p>
+                        Experimenting with local AI models, image processing
+                        workflows and intelligent applications.
+                    </p>
+
+                    <div class="tags">
+                        <span>Python AI</span>
+                        <span>ComfyUI</span>
+                        <span>FLUX</span>
+                        <span>Automation</span>
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card reveal">
+
+                    <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="1" />
+                        <path d="M3 9h18M8 14h8" />
+                    </svg>
+
+                    <h3>Frontend Development</h3>
+
+                    <p>
+                        Creating responsive interfaces with attention
+                        to usability, structure and visual presentation.
+                    </p>
+
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card reveal">
+
+                    <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M4 5h16v14H4zM8 9h8M8 13h8M8 17h4" />
+                    </svg>
+
+                    <h3>API Engineering</h3>
+
+                    <p>
+                        Building and integrating APIs for communication
+                        between different applications and services.
+                    </p>
+
+                    <div class="tags">
+                        <span>REST API</span>
+                        <span>JSON</span>
+                        <span>Postman</span>
+                        <span>HTTP</span>
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card reveal">
+
+                    <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M4 4h16v16H4zM8 8h8v8H8zM12 2v2m0 16v2M2 12h2m16 0h2" />
+                    </svg>
+
+                    <h3>Development Tools</h3>
+
+                    <p>
+                        Using modern development environments, version control
+                        and application development workflows.
+                    </p>
+
+                    <div class="tags">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>VS Code</span>
+                        <span>Linux</span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section class="projects" id="projects">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="section-number">03 / THE SPECIMENS</div>
+
+                <h2>Selected Experiments</h2>
+
+                <p>
+                    A curated archive of applications, engineering experiments
+                    and digital discoveries.
+                </p>
+
+                <div class="ornament"></div>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <article class="project-card featured reveal">
+
+                    <div class="project-image">
+
+                        <span class="project-specimen mono">SPECIMEN 001 · FEATURED SYSTEM</span>
+
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1">
+                            <rect x="3" y="3" width="18" height="6" rx="1" />
+                            <rect x="3" y="11" width="18" height="10" rx="1" />
+                            <path d="M7 6h2m6 0h2M7 15h5m-5 3h3m6-3h1m-1 3h1" />
+                        </svg>
+
+                    </div>
+
+                    <div class="project-body">
+
+                        <div class="project-index">01 — ENTERPRISE INVENTORY &amp; SALES ENGINE</div>
+
+                        <h3>Sales Order &amp; Inventory Management System</h3>
+
+                        <p>
+                            A centralized web application engineered using <strong>Python </strong>, <strong>Django
+                            </strong>, <strong>Django REST Framework</strong>, and <strong>MySQL </strong>.
+                            Built to manage customers, product catalogues, sales orders, and automated inventory
+                            movements through transactional business logic, strict validation, and role-based access.
+                        </p>
+
+                        <div class="project-features">
+
+                            <div class="project-feature-item">
+                                <strong>ROLE-BASED PERMISSIONS</strong>
+                                Admin &amp; Sales User roles with secure password hashing, strict order ownership
+                                boundaries, and deletion guards.
+                            </div>
+
+                            <div class="project-feature-item">
+                                <strong>TRANSACTION-SAFE INVENTORY</strong>
+                                Automatic stock deductions upon order confirmation, stock restoration on cancellation,
+                                and prevention of negative inventory.
+                            </div>
+
+                            <div class="project-feature-item">
+                                <strong>REST API &amp; POSTMAN TESTED</strong>
+                                Dedicated endpoints to fetch active products, generate orders, view order details, and
+                                execute confirm/cancel operations.
+                            </div>
+
+                            <div class="project-feature-item">
+                                <strong>39 AUTOMATED TESTS &amp; SQL REPORTS</strong>
+                                Full test suite covering pricing algorithms and stock pipelines; includes 5 standalone
+                                SQL queries and CSV bulk import with rollback.
+                            </div>
+
+                        </div>
+
+                        <div class="tags">
+                            <span>Python </span>
+                            <span>Django </span>
+                            <span>Django REST Framework</span>
+                            <span>MySQL </span>
+                            <span>RESTful APIs</span>
+                            <span>RBAC</span>
+                            <span>Transactions</span>
+                            <span>Automated Testing (39 Tests)</span>
+                        </div>
+
+                        <a href="https://github.com/sujal-dev07/sales_inventory" target="_blank"
+                            rel="noopener noreferrer" class="project-link">
+                            VIEW REPOSITORY &amp; SYSTEM SPECS ↗
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project-card reveal">
+
+                    <div class="project-image">
+
+                        <span class="project-specimen mono">SPECIMEN 002</span>
+
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <circle cx="12" cy="12" r="4.5" />
+                            <path d="M12 3v3m0 12v3M3 12h3m12 0h3" />
+                            <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+                        </svg>
+
+                    </div>
+
+                    <div class="project-body">
+
+                        <div class="project-index">02 — ARTIFICIAL INTELLIGENCE &amp; VISION</div>
+
+                        <h3>AI Image Generator &amp; Editor</h3>
+
+                        <p>
+                            A desktop AI synthesis and editing suite developed with <strong>Python</strong>,
+                            <strong>Gradio</strong>, <strong>ComfyUI</strong>, and state-of-the-art <strong>FLUX
+                                models</strong> (FLUX Kontext &amp; FLUX Redux). Features prompt-driven editing,
+                            multi-image reference composition, identity-preserving pipelines, and a modular provider
+                            architecture optimized for efficient offline processing.
+                        </p>
+
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>Gradio</span>
+                            <span>ComfyUI</span>
+                            <span>FLUX Kontext</span>
+                            <span>FLUX Redux</span>
+                            <span>Prompt Workflows</span>
+                            <span>Offline Processing</span>
+                        </div>
+
+                        <a href="https://github.com/sujal-dev07/AI-Image-Generator-Editor-" target="_blank"
+                            rel="noopener noreferrer" class="project-link">
+                            VIEW RESEARCH &amp; PIPELINES ↗
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project-card reveal">
+
+                    <div class="project-image">
+
+                        <span class="project-specimen mono">SPECIMEN 003</span>
+
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1">
+                            <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                            <path d="M6 1v4M10 1v4M14 1v4" />
+                        </svg>
+
+                    </div>
+
+                    <div class="project-body">
+
+                        <div class="project-index">03 — FULL-STACK MERN SYSTEM</div>
+
+                        <h3>L’Arôme Café — Menu &amp; Order Platform</h3>
+
+                        <p>
+                            A modern, full-stack <strong>MERN</strong> application built for seamless café menu
+                            exploration and online ordering. Implements interactive shopping cart management, guest
+                            checkout flows, JWT authentication, and role-based admin dashboards. Documented with Swagger
+                            APIs and deployed live across Vercel and Render.
+                        </p>
+
+                        <div class="tags">
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>Express.js</span>
+                            <span>MongoDB</span>
+                            <span>JWT Auth</span>
+                            <span>Swagger API</span>
+                            <span>Vercel &amp; Render</span>
+                        </div>
+
+                        <a href="https://larome-frontend.vercel.app/" target="_blank" rel="noopener noreferrer"
+                            class="project-link">
+                            VIEW LIVE APPLICATION &amp; REPO ↗
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+
+    <section class="experience" id="experience">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="section-number">04 / CHRONOLOGY</div>
+
+                <h2>The Development Journal</h2>
+
+                <p>
+                    Professional software engineering internship and postgraduate academic foundations.
+                </p>
+
+                <div class="ornament"></div>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <article class="timeline-item reveal">
+
+                    <div class="timeline-badge mono">INTERNSHIP EXPERIENCE</div>
+
+                    <h3>Full Stack Developer Intern</h3>
+
+                    <div class="timeline-subtitle">Technoguide Infosoft — Anand, Gujarat</div>
+
+                    <div class="timeline-date">DEC 2025 — APR 2026</div>
+
+                    <p>
+                        Developed scalable business solutions and full-stack web applications, focusing on robust
+                        backend architecture, secure role-based access control, and payment gateway infrastructure.
+                    </p>
+
+
+
+                </article>
+
+
+                <article class="timeline-item reveal">
+
+                    <div class="timeline-badge mono">EDUCATION</div>
+
+                    <h3>Master of Computer Applications (MCA)</h3>
+
+                    <div class="timeline-subtitle">Institute of Science & Technology for Advanced Studies & Research
+                        (CVM), Anand</div>
+
+                    <div class="timeline-date">2024 — 2026 </div>
+
+
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TESTIMONIALS -->
+
+    <section class="testimonials">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="section-number">05 / WORKING PRINCIPLES</div>
+
+                <h2>Notes on Good Engineering</h2>
+
+                <p>
+                    Principles that guide my approach to software development.
+                </p>
+
+                <div class="ornament"></div>
+
+            </div>
+
+
+            <div class="testimonial-grid">
+
+                <article class="testimonial-card reveal">
+
+                    <div class="quote-mark">“</div>
+
+                    <p>
+                        Reliable software begins with understanding the problem.
+                        Clear communication and thoughtful planning make
+                        development more effective.
+                    </p>
+
+                    <h4>Communication</h4>
+                    <small>ENGINEERING PRINCIPLE 01</small>
+
+                </article>
+
+
+                <article class="testimonial-card reveal">
+
+                    <div class="quote-mark">“</div>
+
+                    <p>
+                        Good code should be understandable, maintainable
+                        and useful long after the first implementation.
+                    </p>
+
+                    <h4>Clean Architecture</h4>
+                    <small>ENGINEERING PRINCIPLE 02</small>
+
+                </article>
+
+
+                <article class="testimonial-card reveal">
+
+                    <div class="quote-mark">“</div>
+
+                    <p>
+                        Every new technology presents an opportunity
+                        to learn, experiment and discover better solutions.
+                    </p>
+
+                    <h4>Continuous Learning</h4>
+                    <small>ENGINEERING PRINCIPLE 03</small>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <div class="container reveal">
+
+            <div class="section-number">06 / THE NEXT DISCOVERY</div>
+
+            <h2>
+                Every Great Idea
+                Begins With a <em>Conversation.</em>
+            </h2>
+
+            <p>
+                Have an interesting project, a challenging engineering problem
+                or an opportunity to collaborate? I would be glad to hear about it.
+            </p>
+
+            <a href="mailto:sujaldev090@gmail.com" class="btn btn-primary">
+                Write Me a Letter ↗
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <h3>Sujal<span>.</span> Parmar</h3>
+
+                    <p>
+                        Python Developer and Backend Engineer.
+                        Exploring the intersection of technology,
+                        engineering and intelligent applications.
+                    </p>
+
+                    <div class="socials">
+
+                        <a href="https://github.com/sujal-dev07" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
+
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.24-1.62-1.24-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.7 2.63 1.21 3.27.92.1-.72.39-1.21.71-1.49-2.48-.28-5.08-1.24-5.08-5.52 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.08 1.14a10.7 10.7 0 0 1 5.6 0c2.13-1.44 3.07-1.14 3.07-1.14.61 1.53.23 2.67.11 2.95.72.78 1.15 1.77 1.15 2.99 0 4.29-2.6 5.23-5.09 5.51.4.35.76 1.02.76 2.06v3.05c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8z" />
+                            </svg>
+
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/sujal-parmar07/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn">
+
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M5.1 3a2.1 2.1 0 1 0 0 4.2 2.1 2.1 0 0 0 0-4.2zM3.3 9h3.6v12H3.3zm5.9 0h3.4v1.64h.05A3.75 3.75 0 0 1 16.02 8.7c3.64 0 4.31 2.4 4.31 5.52V21h-3.6v-6.02c0-1.44-.03-3.3-2.02-3.3-2.03 0-2.34 1.58-2.34 3.2V21H9.2z" />
+                            </svg>
+
+                        </a>
+
+                        <a href="mailto:sujaldev090@gmail.com" aria-label="Email">
+
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                <path d="m3 7 9 6 9-6" />
+                            </svg>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Explore</h4>
+
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Expertise</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Journey</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Connect</h4>
+
+                    <a href="mailto:sujaldev090@gmail.com">Email</a>
+                    <a href="https://github.com/sujal-dev07" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/sujal-parmar07/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a>
+                    <a href="#contact">Contact</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="copyright">
+
+                <span>© 2026 SUJAL PARMAR. ALL RIGHTS RESERVED.</span>
+
+
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        // MOBILE NAVIGATION
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", () => {
+
+            const isOpen = navLinks.classList.toggle("active");
+
+            menuBtn.setAttribute("aria-expanded", isOpen);
+
+        });
+
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("active");
+
+                menuBtn.setAttribute("aria-expanded", "false");
+
+            });
+
+        });
+
+
+        // SCROLL REVEAL
+
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        }, {
+            threshold: 0.12
+        });
+
+
+        document.querySelectorAll(".reveal").forEach(element => {
+
+            observer.observe(element);
+
+        });
+
+    </script>
+
+</body>
+
+</html>
